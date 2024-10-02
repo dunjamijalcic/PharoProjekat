@@ -25,22 +25,22 @@ Game class >> title: aTitle genre: aGenre platform: aPlatform price: aPrice rati
 
 { #category : #accessing }
 Game >> Genre [
-   ^genre
+   ^ genre
 ]
 
 { #category : #accessing }
 Game >> Platform [
-	^platform 
+	^ platform 
 ]
 
 { #category : #accessing }
 Game >> Price [
-	^price
+	^ price
 ]
 
 { #category : #accessing }
 Game >> Rating [
-	^rating
+	^ rating
 ]
 
 { #category : #accessing }
@@ -49,12 +49,12 @@ Game >> Title [
 ]
 
 { #category : #acccessing }
-Game >> descriptionCategory [ 
+Game >> descriptionGenre [
 	<magritteDescription>
 	^ MAStringDescription new
-		label: 'Category';
+		label: 'Genre';
 		priority: 300;
-		accessor: #category;
+		accessor: #genre;
 		beRequired;
 		yourself
 
@@ -104,6 +104,17 @@ Game >> descriptionRating [
 
 ]
 
+{ #category : #'acessing-magritte' }
+Game >> descriptionTitle [
+	<magritteDescription>
+	^ MAStringDescription new
+		label: 'Title';
+		priority: 100;
+		accessor: #title;
+		beRequired;
+		yourself
+]
+
 { #category : #accessing }
 Game >> genre: aGenre [
         genre := aGenre.
@@ -122,6 +133,11 @@ Game >> platform: aPlatform [
 { #category : #accessing }
 Game >> price: aPrice [
         price := aPrice.
+]
+
+{ #category : #accessing }
+Game >> rating: aRating [
+        rating := aRating.
 ]
 
 { #category : #accessing }
