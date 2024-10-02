@@ -116,6 +116,6 @@ GameStore >> searchByTitle: aTitle [
 ]
 
 { #category : #acccessing }
-GameStore >> searchGamesWithRating: aRating [
-    ^ games select: [:game | game rating = aRating].
+GameStore >> searchGamesWithGenre: aGenre [
+    ^ games select: [ :game | game genre = aGenre ].
 ]
