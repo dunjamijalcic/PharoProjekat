@@ -41,13 +41,13 @@ GSHeader >> renderBrandOn: html [
 	html tbsNavbarHeader: [
 		html tbsNavbarBrand
 			url: self application url;
-			with: 'GameStore' ].
+			with: 'GameStore' ]
 ]
 
 { #category : #acccessing }
 GSHeader >> renderButtonsOn: html [ 
 	self renderAdminButtonOn: html.
-	self renderSearchButtonOn: html.
+	self renderSearchButtonOn: html
 ]
 
 { #category : #rendering }
@@ -56,7 +56,7 @@ GSHeader >> renderContentOn: html [
 		html tbsContainer: [
 			self renderBrandOn: html.
 			self renderButtonsOn: html.
-		] ].
+		] ]
 ]
 
 { #category : #rendering }
@@ -66,6 +66,6 @@ GSHeader >> renderSearchButtonOn: html [
 			tbsPullRight;
 			callback: [ component goToSearchView ];
 			with: [
-				html tbsGlyphIcon iconSearch.
-				html text: ' Search View' ]].
+				html tbsGlyphIcon iconListAlt.
+				html text: ' Search View' ] ]
 ]

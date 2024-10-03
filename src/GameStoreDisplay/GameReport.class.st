@@ -53,7 +53,7 @@ GameReport >> refreshReport [
 GameReport >> renderAddGameForm: aGame [
 	^ aGame asComponent
 		addDecoration: (TBSMagritteFormDecoration buttons: { #save -> 'Add game'. #cancel -> 'Cancel' });
-		yourself.
+		yourself
 ]
 
 { #category : #rendering }
@@ -62,14 +62,14 @@ GameReport >> renderContentOn: html [
 	html anchor
 		callback: [ self addGame ];
 		with: 'Add game'.
-	super renderContentOn: html.
+	super renderContentOn: html
 ]
 
 { #category : #rendering }
 GameReport >> renderEditGameForm: aGame [ 
 	^ aGame asComponent
 		addDecoration: (TBSMagritteFormDecoration buttons: { #save -> 'Save game'. #cancel -> 'Cancel' });
-		yourself.
+		yourself
 ]
 
 { #category : #accessing }

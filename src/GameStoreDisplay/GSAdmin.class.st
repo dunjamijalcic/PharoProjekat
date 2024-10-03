@@ -35,7 +35,7 @@ GSAdmin >> goToGameListView [
 { #category : #acccessing }
 GSAdmin >> initialize [
 	super initialize.
-	self gameReport: (GameReport from: self game)
+	self gameReport: (GameReport from: self store)
 ]
 
 { #category : #rendering }

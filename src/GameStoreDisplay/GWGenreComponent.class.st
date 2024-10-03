@@ -52,7 +52,7 @@ GWGenreComponent >> renderContentOn: html [
 					id: 'genreInput';
 					yourself.
 				html submitButton
-					callback: [ self report: (GWGenreReport from: self game genre: genreInput value) ];
+					callback: [ self report: (GWGenreReport from: self store genre: genreInput value) ];
 					with: 'Search'.
 			]
 		].
