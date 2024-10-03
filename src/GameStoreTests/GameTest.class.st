@@ -19,5 +19,4 @@ GameTest >> testGameCreation [
     self assert: game platform equals:'PC'.
     self assert: game price equals:  59.99.
     self assert: game rating equals:7.5. 
-
 ]

@@ -13,7 +13,7 @@ GSAdminHeader >> renderButtonsOn: html [
 GSAdminHeader >> renderDisconnectButtonOn: html [ 
 	html tbsNavbarButton
 		tbsPullRight;
-		callback: [ self goToGamesListView ];
+		callback: [ component goToGamesListView ];
 		with: [
 			html text: 'Disconnect '.
 			html tbsGlyphIcon iconLogout ].
