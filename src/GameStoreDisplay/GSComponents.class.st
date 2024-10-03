@@ -15,30 +15,30 @@ GSComponents class >> categories: categories games: aScreen [
 
 { #category : #accessing }
 GSComponents >> categories [ 
-	^ categories.
+	^ categories
 ]
 
 { #category : #accessing }
 GSComponents >> categories: aCollection [ 
-	categories := aCollection asSortedCollection.
+	categories := aCollection asSortedCollection
 ]
 
 { #category : #accessing }
 GSComponents >> games [ 
-	^ games.
+	^ games
 ]
 
 { #category : #accessing }
 GSComponents >> games: aComponent [ 
-	games := aComponent.
+	games := aComponent
 ]
 
 { #category : #rendering }
 GSComponents >> renderCategoryLinkOn: html with: aCategory [ 
 	html tbsLinkifyListGroupItem
-		class: 'active' if: aCategory = self games currentCategory;
+		class: 'active' if: aCategory = self games current;
 		callback: [ self selectCategory: aCategory ];
-		with: aCategory.
+		with: aCategory
 ]
 
 { #category : #rendering }
@@ -52,14 +52,14 @@ GSComponents >> renderContentOn: html [
 			categories do: [ :category |
 				html div
 					class: 'list-group-item list-group-item-custom';
-					with: [ self renderCategoryLinkOn: html with: category ].
-			].
-		].
+					with: [ self renderCategoryLinkOn: html with: category ]
+			]
+		]
 ]
 
 { #category : #acccessing }
 GSComponents >> selectCategory: aCategory [ 
-	games currentCategory: aCategory.
+	games current: aCategory
 
 ]
 

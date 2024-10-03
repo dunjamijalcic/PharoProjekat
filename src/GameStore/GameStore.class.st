@@ -76,11 +76,6 @@ GameStore >> gameCount [
     ^ games size
 ]
 
-{ #category : #acccessing }
-GameStore >> gamesByGenre: aGenre [ 
-    ^ games select: [ :game | game genre = aGenre ]
-]
-
 { #category : #testing }
 GameStore >> hasGame: aGame [
     ^ games includes: aGame
@@ -107,12 +102,12 @@ GameStore >> removeGame: aGame [
 
 { #category : #acccessing }
 GameStore >> searchByPlatform: aPlatform [ 
-        ^ games select: [:game | game platform = aPlatform].
+        ^ games select: [ :game | game platform = aPlatform ].
 ]
 
 { #category : #acccessing }
 GameStore >> searchByTitle: aTitle [ 
-        ^ games select: [:game | game title = aTitle].
+        ^ games select: [ :game | game title = aTitle ].
 ]
 
 { #category : #acccessing }

@@ -97,7 +97,7 @@ Game >> genre [
 
 { #category : #accessing }
 Game >> genre: aGenre [
-        genre := aGenre.
+        genre := aGenre
 ]
 
 { #category : #initialization }
